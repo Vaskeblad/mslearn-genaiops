@@ -8,6 +8,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from azure.identity import DefaultAzureCredential
 from azure.ai.projects import AIProjectClient
+import truststore
+
+truststore.inject_into_ssl()
 
 # Load environment variables from .env file
 load_dotenv()
